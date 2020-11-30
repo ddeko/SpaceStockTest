@@ -1,0 +1,22 @@
+[
+    {
+       "id":1,
+       "name":"Jakarta Selatan",
+       "imgUrl":"https://res.cloudinary.com/dpqdlkgsz/image/upload/t_alohomora/v1/Periurus%20Memoria/area/thumbnail/jakarta_selatan.png"
+    },
+    {
+       "id":2,
+       "name":"Jakarta Barat",
+       "imgUrl":"https://res.cloudinary.com/dpqdlkgsz/image/upload/t_alohomora/v1/Periurus%20Memoria/area/thumbnail/jakarta_selatan.png"
+    },
+    {
+       "id":3,
+       "name":"Jakarta Utara",
+       "imgUrl":"https://res.cloudinary.com/dpqdlkgsz/image/upload/t_alohomora/v1/Periurus%20Memoria/area/thumbnail/jakarta_selatan.png"
+    },
+    {
+       "id":4,
+       "name":"Jakarta Timur",
+       "imgUrl":"https://res.cloudinary.com/dpqdlkgsz/image/upload/t_alohomora/v1/Periurus%20Memoria/area/thumbnail/jakarta_selatan.png"
+    }
+]
