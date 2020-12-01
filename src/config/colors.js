@@ -55,7 +55,7 @@ export default {
   
     facebookBlue: "#3b5998",
     softBlue: "#DDF2F6",
-    darkBlue: "#2399F3",
+    darkBlue: "#0c5777",
   
     skyBlue: "#CBEFFD",
     darkSkyBlue: "#AAE7FF",

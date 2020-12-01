@@ -1,0 +1,42 @@
+[
+   {
+      "id":1,
+      "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg",
+      "name":"Green Lake Apartment",
+      "price":"325",
+      "unit":8,
+      "location":"Jakarta Barat"
+   },
+   {
+      "id":2,
+      "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg",
+      "name":"Kali Bata City",
+      "price":"324",
+      "unit":9,
+      "location":"Jakarta Barat"
+   },
+   {
+      "id":3,
+      "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg",
+      "name":"Mediteranian Residence",
+      "price":"327",
+      "unit":5,
+      "location":"Jakarta Barat"
+   },
+   {
+      "id":4,
+      "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg",
+      "name":"Sherwood",
+      "price":"328",
+      "unit":6,
+      "location":"Jakarta Barat"
+   },
+   {
+      "id":5,
+      "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg",
+      "name":"The Peak",
+      "price":"320",
+      "unit":4,
+      "location":"Jakarta Barat"
+   }
+]

@@ -16,8 +16,7 @@ import { SvgCssUri } from 'react-native-svg';
 
 import { images, Colors, Values } from '../../config';
 
-import { menu } from '../../data';
-
+import { menu, products } from '../../data';
 
 import { Icon } from 'react-native-elements';
 import FastImage from 'react-native-fast-image';
@@ -28,7 +27,6 @@ import LocationHorizontalListView from './components/LocationHorizontalListView'
 
 
 class Menu extends React.Component {
-  
   static navigationOptions = ({ navigation, navigationOptions }) => {
     return { 
       headerStyle: {
@@ -91,48 +89,7 @@ class Menu extends React.Component {
                     {name: "Rumah", id:2},
                     {name: "Kantor", id:3}
                   ],
-      products: [
-        {
-          id: 1,
-          image:'https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg',
-          name: "Green Lake Apartment",
-          price: "325 Juta",
-          unit: 8,
-          location: "Jakarta Barat"
-        },
-        {
-          id: 2,
-          image:'https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg',
-          name: "Kali Bata City",
-          price: "324 Juta",
-          unit: 9,
-          location: "Jakarta Barat"
-        },
-        {
-          id: 3,
-          image:'https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg',
-          name: "Mediteranian Residence",
-          price: "327 Juta",
-          unit: 5,
-          location: "Jakarta Barat"
-        },
-        {
-          id: 4,
-          image:'https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg',
-          name: "Sherwood",
-          price: "328 Juta",
-          unit: 6,
-          location: "Jakarta Barat"
-        },
-        {
-          id: 5,
-          image:'https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg',
-          name: "The Peak",
-          price: "320 Juta",
-          unit: 4,
-          location: "Jakarta Barat"
-        },
-      ]
+      products: products
     }
   }
 
@@ -280,7 +237,7 @@ class Menu extends React.Component {
   
   renderListItem = (index, item) => {
     return <TouchableOpacity style={{alignItems: 'center', backgroundColor: "whites", 
-        borderRadius: 8}} onPress={() => { this.onSubmit()}}>
+        borderRadius: 8}} >
           <View style={{height: Values.deviceWidth * .22, width: Values.deviceWidth * .22, borderRadius:8, backgroundColor: Colors.white, elevation:1, justifyContent:"center", alignItems:"center"}}>
             <View style={{height:"45%", width:"45%", borderRadius: Values.deviceWidth * .22, backgroundColor: Colors.transparent, justifyContent:"center", alignItems:"center"}}>
               <SvgCssUri
@@ -296,7 +253,7 @@ class Menu extends React.Component {
   }
 
   renderListProductItem = (index, item) => {
-    return <TouchableOpacity style={{alignItems: 'center', backgroundColor: "whites", borderRadius: 8, marginVertical: 8, marginRight: 15}} >
+    return <TouchableOpacity style={{alignItems: 'center', backgroundColor: "whites", borderRadius: 8, marginVertical: 8, marginRight: 15}} onPress={() => { this.onSubmit(item)}}>
           <View style={{height:Values.deviceWidth*.75, width:Values.deviceWidth*.58, borderRadius:8, elevation: 1, backgroundColor: Colors.white, borderColor:Colors.lightGray, borderWidth:1}}>
             <Image source={{ uri: item.image }}
                 style={{
@@ -313,7 +270,7 @@ class Menu extends React.Component {
               <Text style={{fontSize:9, color: Colors.placeholder, textAlignVertical: "center", textAlign:"left", fontWeight:"bold", marginBottom:4,}}>{item.unit + " Unit Tersedia"}</Text>
               <Text style={{fontSize:14, color: Colors.black, textAlignVertical: "center", textAlign:"left", fontWeight:"bold", marginBottom:6,}}>{item.name}</Text>
               <Text style={{fontSize:10, color: Colors.placeholder, textAlignVertical: "center", textAlign:"left", marginBottom:6,}}>{"Mulai"}</Text>
-              <Text style={{fontSize:14, color: Colors.black, textAlignVertical: "center", textAlign:"left", fontWeight:"bold", marginBottom:6,}}>{"Rp. " + item.price}</Text>
+              <Text style={{fontSize:14, color: Colors.black, textAlignVertical: "center", textAlign:"left", fontWeight:"bold", marginBottom:6,}}>{"Rp. " + item.price + " Juta"}</Text>
               <View style={{flexDirection:"row",  alignItems:"center"}}>
                 <Icon
                     name='map-pin'
@@ -328,15 +285,15 @@ class Menu extends React.Component {
     </TouchableOpacity>
   }
 
-  onSubmit = () => {
-    
+  onSubmit = (item) => {
+    this.props.navigation.navigate("ProductDetail", { productId: item.id});
   }
 
   render() {
     const { products } = this.props;
 
     return (
-      <ScrollView style={styles.mainContainer}>
+      <ScrollView contentContainerStyle={styles.mainContainer}>
         <StatusBar backgroundColor={Colors.secondaryColor} barStyle="light-content" />
         {this.renderHeader()}
         {this.renderSearch()}
@@ -380,9 +337,9 @@ class Menu extends React.Component {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    // flexDirection: "column",
-    // backgroundColor: Colors.white,
-    // flexGrow: 1,
+    flexDirection: "column",
+    backgroundColor: Colors.white,
+    flexGrow: 1,
   }, 
   topRightIconContainer: {
     height: 32,
@@ -390,7 +347,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-},
+  },
   buttonContainer: {
     flexDirection: "column",
     backgroundColor: "white",

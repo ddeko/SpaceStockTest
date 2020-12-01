@@ -6,7 +6,7 @@ import { YellowBox, View, Image } from "react-native";
 import { images } from '../../config';
 
 import ProductList from '../products/ProductList';
-import Summary from '../products/Summary';
+import ProductDetail from '../products/ProductDetail';
 import Menu from '../home/Menu';
 
 
@@ -19,10 +19,10 @@ YellowBox.ignoreWarnings([
 ]);
 
 const stackNavigator = createStackNavigator({
-        Menu: { screen: Menu },
-        ProductList: { screen: ProductList },
-        Summary: { screen: Summary }
-    },
+    Menu: { screen: Menu },
+    ProductDetail: { screen: ProductDetail },
+    ProductList: { screen: ProductList },
+},
    
 );
 

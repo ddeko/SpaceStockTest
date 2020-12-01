@@ -1,0 +1,51 @@
+{
+   "id":1,
+   "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg",
+   "name":"Green Lake Apartment",
+   "price":"325",
+   "unit":8,
+   "location":"Jakarta Barat",
+   "address": "Jl. Danau Sunter Selatan",
+   "photos":[
+      {
+         "id":1,
+         "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg"
+      },
+      {
+         "id":2,
+         "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/ce8dlr2iziqkx3uokyzb.jpg"
+      },
+      {
+         "id":3,
+         "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/bwhrfo6adffhrd5dwvo6.jpg"
+      },
+      {
+         "id":4,
+         "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/ce8dlr2iziqkx3uokyzb.jpg"
+      },
+      {
+         "id":5,
+         "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima_x/building/y96ebj0yhrw9ml827xpy.jpg"
+      },
+      {
+         "id":6,
+         "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/bwhrfo6adffhrd5dwvo6.jpg"
+      }
+   ],
+   "rentUnit": 3,
+   "buyUnit": 7,
+   "agents":[
+      {
+         "id":1,
+         "name":"Asron Daniel",
+         "title": "Spacestock Alpha II",
+         "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/profile/lttltm3uxkjvil6tjvmr"
+      },
+      {
+         "id":2,
+         "name":"Asron Daniel",
+         "title": "Spacestock Alpha II",
+         "image":"https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/profile/lttltm3uxkjvil6tjvmr"
+      }
+   ]
+}
